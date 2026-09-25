@@ -30,7 +30,7 @@ RECOMMENDATION: DO NOT SHIP GLOBALLY (CONDITIONAL DESKTOP-ONLY ROLLOUT)
 | **95% Wald Confidence Interval** | — | — | $[+0.07\text{pp}, +0.67\text{pp}]$ | $\alpha = 0.05$ | ⚠️ Lower bound near zero |
 | **Desktop Segment Conversion** | $3.39\%$ ($426$) | $4.31\%$ ($535$) | **$+0.91\text{pp}$** ($+26.9\%$) | $Z = 3.75$, $p < 0.001$ | 🟢 Strong Winner |
 | **Mobile Segment Conversion** | $2.29\%$ ($286$) | $2.13\%$ ($267$) | **$-0.16\text{pp}$** ($-6.9\%$) | $Z = -0.81$, $p = 0.421$ | 🔴 Regressed / Ineffective |
-| **Guardrail Metric: 30-Day ARPU** | **$3.31** | **$2.92** | **-$0.39** ($-11.9\%$) | Welch's $t = -2.14$, $p = 0.0323$ | 🔴 Statistically Significant Drop |
+| **Guardrail Metric: 30-Day ARPU** | **\$3.31** | **\$2.92** | **-\$0.39** ($-11.9\%$) | Welch's $t = -2.14$, $p = 0.0323$ | 🔴 Statistically Significant Drop |
 | **Sample Ratio Mismatch (SRM)** | $25,053$ ($50.1\%$) | $24,947$ ($49.9\%$) | Expected 50/50 | $\chi^2 = 0.2247$, $p = 0.6355$ | 🟢 Gate Passed (No SRM) |
 | **Temporal Stability (Novelty)** | W1: $+0.47\text{pp}$ | W2: $+0.27\text{pp}$ | $-0.20\text{pp}$ Fade | $-42.6\%$ decay rate | ⚠️ Novelty Wear-Off |
 
@@ -54,13 +54,13 @@ The experiment tracked 50,000 unique visitors randomly assigned across 14 days (
 ![Temporal Lift Decay](../figures/ab_test_weekly_novelty.png)
 
 #### Failure Mode 2: Severe Monetization Guardrail Breach (ARPU Drop)
-* 30-Day ARPU dropped from **$3.31** in Control to **$2.92** in Variant, representing a net loss of **-$0.39 per visitor (-11.9%)**.
+* 30-Day ARPU dropped from **\$3.31** in Control to **\$2.92** in Variant, representing a net loss of **-\$0.39 per visitor (-11.9%)**.
 * Welch's Two-Sample T-Test (`equal_var=False`) confirms this drop is **statistically significant** ($t = -2.14, p = 0.0323 < 0.05$).
-* Among converted users, average spend dropped by **$22.2\%$** ($116.59 Control vs. $90.71 Variant). The redesigned hero copy attracted lower-intent users with smaller basket sizes.
+* Among converted users, average spend dropped by **$22.2\%$** (\$116.59 Control vs. \$90.71 Variant). The redesigned hero copy attracted lower-intent users with smaller basket sizes.
 
 #### Failure Mode 3: Simpson's Paradox & Mobile Regression
-* **Desktop Users (50% traffic)**: Clear success. Conversion jumped from $3.39\%$ to $4.31\%$ (**$+0.91\text{pp}$**, $+26.9\%$, $p < 0.001$) while ARPU held steady ($3.95 vs $3.92).
-* **Mobile Users (50% traffic)**: Total failure. Conversion dropped from $2.29\%$ to $2.13\%$ (**$-0.16\text{pp}$**, $-6.9\%$, $p = 0.421$) and ARPU cratered from **$2.67** to **$1.92** (**-$0.75**, $-28.1\%$). The multi-column hero card pushed the primary call-to-action below the fold on mobile viewports.
+* **Desktop Users (50% traffic)**: Clear success. Conversion jumped from $3.39\%$ to $4.31\%$ (**$+0.91\text{pp}$**, $+26.9\%$, $p < 0.001$) while ARPU held steady (\$3.95 vs \$3.92).
+* **Mobile Users (50% traffic)**: Total failure. Conversion dropped from $2.29\%$ to $2.13\%$ (**$-0.16\text{pp}$**, $-6.9\%$, $p = 0.421$) and ARPU cratered from **\$2.67** to **\$1.92** (**-\$0.75**, $-28.1\%$). The multi-column hero card pushed the primary call-to-action below the fold on mobile viewports.
 
 ![Segment Breakdown by Device](../figures/ab_test_segment_breakdown.png)
 
