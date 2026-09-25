@@ -14,7 +14,7 @@ This repository delivers an end-to-end product analytics audit evaluating experi
 | **2** | **Funnel & Friction Analysis** | [`notebook/02_funnel_analysis.ipynb`](notebook/02_funnel_analysis.ipynb)<br>[`findings/02_funnel_friction.md`](findings/02_funnel_friction.md) | ✅ Done |
 | **3** | **Cohort Retention Dynamics** | [`notebook/03_cohort_retention.ipynb`](notebook/03_cohort_retention.ipynb)<br>[`findings/03_retention_dynamics.md`](findings/03_retention_dynamics.md) | ✅ Done |
 | **4** | **A/B Test Statistical Diagnostics** | [`notebook/04_ab_test_evaluation.ipynb`](notebook/04_ab_test_evaluation.ipynb)<br>[`findings/04_experiment_diagnostics.md`](findings/04_experiment_diagnostics.md) | ✅ Done |
-| **5** | **Executive Decision Memorandum** | `memo/executive_memo.md` (Minto SCR Framework) | ⏳ Up Next |
+| **5** | **Executive Decision Memorandum** | [`memo/executive_memo.md`](memo/executive_memo.md) | ✅ Done |
 
 ---
 
@@ -38,7 +38,7 @@ ab-testing-product-analytics/
 │   ├── 03_retention_dynamics.md    # Asymptotic flattening & PMF curve assessment
 │   └── 04_experiment_diagnostics.md # Statistical audit summary & failure-mode checks
 ├── memo/
-│   └── executive_memo.md           # 1-page executive decision memo (Milestone 5)
+│   └── executive_memo.md           # 1-page CPO executive decision memo (Minto SCR)
 ├── notebook/
 │   ├── 02_funnel_analysis.ipynb    # In-memory clickstream deduplication & funnel stages
 │   ├── 03_cohort_retention.ipynb   # Feature engineering, matrix pivot, & Seaborn heatmap
@@ -95,7 +95,7 @@ Deploying Homepage V2 platform-wide would decrease net platform revenue and harm
 2. **Mobile Rollback & Viewport Remediation:** Revert mobile traffic to Control immediately. Redesign the mobile hero container to pin the primary signup CTA above the fold, remediating the friction discovered in Milestone 2.
 3. **Monetization Safeguards:** Re-engineer the onboarding experience for variant signups to introduce premium tier discovery hooks before considering any future global deployment.
 
-*(Full executive briefing and CPO memorandum to be delivered in Milestone 5.)*
+*(Read the complete CPO Executive Decision Memorandum in [`memo/executive_memo.md`](memo/executive_memo.md).)*
 
 ---
 
